@@ -1,0 +1,279 @@
+body {
+  color: white;
+  font-size: 15.5pt;
+  width: 100%;
+
+}
+
+.encabezado {
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 24pt;
+  color: white;
+  margin: 5px;
+  /*background-color:rgba(0, 0, 0, 0.58);*/
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 5);
+}
+
+/* Entrada o salida*/ 
+.filter-switch {
+  margin: 5px;
+  border: 3px solid #009EFF;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 300px;
+  overflow: hidden;
+}
+.filter-switch input {
+  display: none;
+}
+.filter-switch label {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s;
+  font-weight: 500;
+  font-size: 18px;
+}
+.filter-switch .background {
+  position: absolute;
+  width: 49%;
+  height: 38px;
+  background-color: #009EFF;
+  top: 4px;
+  left: 4px;
+  border-radius: 30px;
+  transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#option2:checked ~ .background {
+  left: 50%;
+}
+#option1:checked + label[for="option1"] {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+#option2:checked + label[for="option2"] {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+#option1:not(:checked) + label[for="option1"],
+#option2:not(:checked) + label[for="option2"] {
+  color: #7d7d7d;
+}
+
+
+
+.montos {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+body::after {
+  content: "";
+  background: url('imagenes/calaveraazteca.jpg');
+  /* Ruta de tu imagen de fondo */
+  opacity: 0.9;
+  /* Opacidad al 50% para la imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Coloca la imagen detrás de todo */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+/*.imput {
+  color: white;
+  font-size: 14pt;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 60px;
+  text-align: center;
+  background: none;
+}*/
+
+
+
+
+
+
+/*inicia modelado de los imput*/ 
+.input-container {
+  --c-text: blrgba(255, 0, 0, 1)ack;
+  --c-bg: rgb(252, 252, 252);
+  --c-outline: rgba(0, 240, 66, 1);
+  display: grid;
+  gap: 1ch;
+  position: relative;
+  max-width: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-weight: 900;
+}
+
+.input-field {
+  padding: 0.3em 0.75em;
+  border-radius: 0.9em;
+  border: 1px solid var(--c-border, currentColor);
+  color: var(--c-text);
+  font-size: 1rem;
+  letter-spacing: 0.3ch;
+  width: 75%;
+  text-align: center;
+}
+
+.input-field:not(:placeholder-shown) + .input-label {
+  transform: translateY(-220%);
+  opacity: 1;
+}
+
+/*.input-field:invalid {
+  --c-border: rgb(230, 85, 60);
+  --c-text: rgb(230, 85, 60);
+  --c-outline: rgb(230, 85, 60);
+}
+*/
+
+.input-field:is(:disabled, :read-only) {
+  --c-border: rgba(9, 255, 96, 1);
+  --c-text: white;
+}
+
+/*.input-field:is(:focus, :focus-visible) {
+  outline: 3px solid var(--c-outline);
+  outline-offset: 2px;
+}
+*/
+.input-label {
+  --timing: 200ms ease-in;
+  position: absolute;
+  left: 10;
+  top: 95%;
+  transition: transform var(--timing),
+    opacity var(--timing);
+  transform: translateY(-50%);
+  opacity: 0;
+  color: white;
+  font-weight: 900;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+
+
+/*
+.caja {
+  background-color: none;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  width: 300px;
+  height: 30px;
+  line-height: 10px;
+  text-align: center;
+  margin: 2px;
+}
+*/
+
+/* From Uiverse.io by zjssun */ 
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+#btn:hover,
+:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  /*text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;*/
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+
+
+/*.boton {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 145px;
+  height: 35px;
+  background-color: dimgrey;
+} 
+*/
+.inputR {
+  font-weight: bold;
+  font-size: 18pt;
+  color: white;
+  border-radius: 10px;
+  width: 110px;
+  height: 30px;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  margin: 5px;
+}
+
+.resultado {
+  background-color: grey;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 17pt;
+  width: 270px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 5px;
+}
+
+.textarea {
+  border: 1px solid black;
+  font-size: 14pt;
+  color: grey;
+  text-align: center;
+  border-radius: 15px;
+  width: 280px;
+  height: 140px;
+  margin: 20px;
+  background: black;
+}
