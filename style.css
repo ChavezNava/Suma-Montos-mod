@@ -85,7 +85,7 @@ body {
 
 body::after {
   content: "";
-  background: url('imagenes/calaveraazteca.jpg');
+  background: url('imagenes/Circuito01.jpg');
   /* Ruta de tu imagen de fondo */
   opacity: 0.9;
   /* Opacidad al 50% para la imagen de fondo */
